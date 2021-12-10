@@ -3,6 +3,7 @@
 ## Designs
 
 Design folder consists of 2 designs. 
+
 1. Movies list page. You have to list movies by genre. One movie can be list in multiple genre. Users can filter movies by using search box. Filter movies by title and overview.
 2. Movie details page.
 
