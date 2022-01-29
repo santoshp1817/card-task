@@ -59,6 +59,7 @@ const MovieList = () => {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'flex-end',
+          margin: 20,
         }}
       >
         <h1>Wookie Movies</h1>
@@ -82,12 +83,11 @@ const MovieList = () => {
         allGenre.map((item) => {
           return (
             <>
-              <h1 style={{ marginLeft: 20 }}>{item}</h1>
+              <h1 style={{ marginLeft: 23 }}>{item}</h1>
               <div
                 style={{
                   display: 'flex',
                   flexDirection: 'row',
-                  // alignItems: 'flex-start',
                   margin: 10,
                   padding: 10,
                 }}

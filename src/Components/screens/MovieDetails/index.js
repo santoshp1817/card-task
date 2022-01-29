@@ -2,6 +2,8 @@ import React from 'react';
 import { Button, Grid } from '@mui/material';
 import StarOutlineIcon from '@mui/icons-material/StarOutline';
 import StarIcon from '@mui/icons-material/Star';
+import PropTypes from 'prop-types';
+
 const MovieDetails = ({ clickedMovie, handleCallback }) => {
   const ratingVal = clickedMovie.imdb_rating / 2;
   console.log('rating', ratingVal);
@@ -47,4 +49,8 @@ const MovieDetails = ({ clickedMovie, handleCallback }) => {
   );
 };
 
+MovieDetails.propTypes = {
+  clickedMovie: PropTypes.object.isRequired,
+  handleCallback: PropTypes.func.isRequired,
+};
 export default MovieDetails;
