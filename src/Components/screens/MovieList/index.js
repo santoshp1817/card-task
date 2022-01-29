@@ -2,7 +2,6 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import Axios from 'axios';
 import CardMovies from '../../CardMovies';
-import { Grid } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import TextField from '@mui/material/TextField';
 import MovieDetails from '../MovieDetails';
@@ -49,6 +48,10 @@ const MovieList = () => {
     );
   };
 
+  const handleCallback = (childData) => {
+    setListView(childData);
+  };
+
   return (
     <>
       <div
@@ -79,7 +82,7 @@ const MovieList = () => {
         allGenre.map((item) => {
           return (
             <>
-              <h1>{item}</h1>
+              <h1 style={{ marginLeft: 20 }}>{item}</h1>
               <div
                 style={{
                   display: 'flex',
@@ -109,7 +112,11 @@ const MovieList = () => {
           );
         })
       ) : (
-        <MovieDetails clickedMovie={clickedMovie} />
+        <MovieDetails
+          clickedMovie={clickedMovie}
+          listView={listView}
+          handleCallback={handleCallback}
+        />
       )}
     </>
   );

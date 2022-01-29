@@ -4,6 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import PropTypes from 'prop-types';
 
 const CardMovies = ({ img, title }) => {
   return (
@@ -24,5 +25,10 @@ const CardMovies = ({ img, title }) => {
       </CardActionArea>
     </Card>
   );
+};
+
+CardMovies.propTypes = {
+  img: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };
 export default CardMovies;
